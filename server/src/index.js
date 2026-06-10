@@ -40,9 +40,9 @@ app.use((error, _req, res, _next) => {
 
 connectDatabase()
   .then(() => {
-    app.listen(port, "127.0.0.1", () => {
-      console.log(`NovaLearn API running on http://127.0.0.1:${port}`);
-    });
+   app.listen(port, "0.0.0.0", () => {
+  console.log(`NovaLearn API running on port ${port}`);
+});
   })
   .catch((error) => {
     console.error("MongoDB connection failed:", error.message);
