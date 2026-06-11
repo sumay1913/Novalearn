@@ -25,27 +25,32 @@ const courses = [
       { title: "Trust and explainability", duration: "16 min" }
     ]
   },
+ 
   {
-    title: "Generative AI Foundations",
-    slug: "generative-ai-foundations",
-    description: "Understand language models, prompting, embeddings, and the systems behind modern AI.",
-    category: "Artificial Intelligence",
-    level: "Beginner",
-    duration: "8 weeks",
-    instructor: "Alex Rivera",
-    color: "#00a991",
-    icon: "brain",
-    rating: 4.8,
-    studentCount: 4120,
-    featured: true,
-    skills: ["LLMs", "Prompting", "RAG"],
-    lessons: [
-      { title: "How generative AI works", duration: "22 min" },
-      { title: "Prompt engineering studio", duration: "32 min" },
-      { title: "Embeddings and search", duration: "28 min" },
-      { title: "Build a knowledge assistant", duration: "60 min", type: "project" }
-    ]
+    title: "How generative AI works",
+    duration: "22 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/G2fqAlgmoPo"
   },
+  {
+    title: "Prompt engineering studio",
+    duration: "32 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/jZIXKlSJcrc"
+  },
+  {
+    title: "Embeddings and search",
+    duration: "28 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/aircAruvnKk"
+  },
+  {
+    title: "Build a knowledge assistant",
+    duration: "60 min",
+    type: "project",
+    videoUrl: "https://www.youtube.com/embed/7eh4d6sabA0"
+  },
+
   {
     title: "Full-Stack JavaScript",
     slug: "full-stack-javascript",
