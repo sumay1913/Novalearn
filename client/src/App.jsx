@@ -393,8 +393,14 @@ function Explore() {
 
 function CourseDetail() {
   const { slug } = useParams();
+  const [selectedLesson, setSelectedLesson] = useState(null);
   const [course, setCourse] = useState(demoCourses.find((item) => item.slug === slug));
   useEffect(() => { api(`/courses/${slug}`).then((data) => setCourse(data.course)).catch(() => {}); }, [slug]);
+  useEffect(() => {
+  if (course?.lessons?.length > 0) {
+    setSelectedLesson(course.lessons[0]);
+  }
+}, [course]);
   if (!course) return <Navigate to="/explore" replace />;
   return (
     <DashboardShell title={course.title} subtitle={`with ${course.instructor}`}>
@@ -404,7 +410,23 @@ function CourseDetail() {
           <CourseArt course={course} />
         </div>
         <div className="detail-layout">
-          <section><span className="kicker">COURSE CURRICULUM</span><h2>What you'll learn</h2><div className="lesson-list">{course.lessons?.map((lesson, index) => <div key={lesson.title}><span className="lesson-number">{String(index + 1).padStart(2, "0")}</span><span className="lesson-play"><CirclePlay size={18} /></span><div><strong>{lesson.title}</strong><small>{lesson.type} · {lesson.duration}</small></div><Check size={17} className={index === 0 ? "complete" : ""} /></div>)}</div></section>
+          {selectedLesson?.videoUrl && (
+  <div style={{ marginBottom: "20px" }}>
+    <iframe
+      width="100%"
+      height="500"
+      src={selectedLesson.videoUrl}
+      title={selectedLesson.title}
+      frameBorder="0"
+      allowFullScreen
+    />
+  </div>
+)}
+          <section><span className="kicker">COURSE CURRICULUM</span><h2>What you'll learn</h2><div className="lesson-list">{course.lessons?.map((lesson, index) => <div
+  key={lesson.title}
+  onClick={() => setSelectedLesson(lesson)}
+  style={{ cursor: "pointer" }}
+><span className="lesson-number">{String(index + 1).padStart(2, "0")}</span><span className="lesson-play"><CirclePlay size={18} /></span><div><strong>{lesson.title}</strong><small>{lesson.type} · {lesson.duration}</small></div><Check size={17} className={index === 0 ? "complete" : ""} /></div>)}</div></section>
           <aside className="skills-panel"><span className="kicker">SKILLS YOU'LL BUILD</span>{course.skills?.map((skill) => <span key={skill}><Check size={15} />{skill}</span>)}<hr /><p>Learn at your own pace with lifetime access and an AI coach available in every lesson.</p></aside>
         </div>
       </div>
