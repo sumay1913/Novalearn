@@ -82,7 +82,27 @@ export const demoCourses = [
       { title: "Visual hierarchy", duration: "25 min", type: "video" },
       { title: "Present with confidence", duration: "18 min", type: "project" }
     ]
-  }
+  },
+  {
+  _id: "course-5",
+  title: "DSA with Java",
+  slug: "dsa-with-java",
+  description: "Learn Data Structures and Algorithms using Java.",
+  category: "Programming",
+  level: "Beginner",
+  duration: "12 weeks",
+  instructor: "Mayank Rajput",
+  color: "#4a90e2",
+  rating: 5.0,
+  studentCount: 0,
+  skills: ["Java", "DSA", "Problem Solving"],
+  published: true,
+  lessons: [
+    { title: "Arrays Introduction", duration: "20 min", type: "video" },
+    { title: "Linked List", duration: "25 min", type: "video" },
+    { title: "Stacks and Queues", duration: "30 min", type: "video" }
+  ]
+}
 ];
 
 export const demoStudent = {
