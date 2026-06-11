@@ -4,7 +4,21 @@ import User from "./models/User.js";
 import Course from "./models/Course.js";
 
 const courses = [
-lessons: [
+  {
+    title: "AI Product Design",
+    slug: "ai-product-design",
+    description: "Design intelligent, human-centered products from first principles to polished prototypes.",
+    category: "Design",
+    level: "Intermediate",
+    duration: "6 weeks",
+    instructor: "Maya Chen",
+    color: "#7c5cff",
+    icon: "wand",
+    rating: 4.9,
+    studentCount: 2840,
+    featured: true,
+    skills: ["AI UX", "Prototyping", "Research"],
+   lessons: [
   {
     title: "Designing with intelligence",
     duration: "18 min",
@@ -28,9 +42,24 @@ lessons: [
     duration: "16 min",
     type: "video",
     videoUrl: "https://www.youtube.com/embed/ad79nYk2keg"
+  }
+]
   },
-
- 
+  {
+    title: "Generative AI Foundations",
+    slug: "generative-ai-foundations",
+    description: "Understand language models, prompting, embeddings, and the systems behind modern AI.",
+    category: "Artificial Intelligence",
+    level: "Beginner",
+    duration: "8 weeks",
+    instructor: "Alex Rivera",
+    color: "#00a991",
+    icon: "brain",
+    rating: 4.8,
+    studentCount: 4120,
+    featured: true,
+    skills: ["LLMs", "Prompting", "RAG"],
+    lessons: [
   {
     title: "How generative AI works",
     duration: "22 min",
@@ -54,8 +83,22 @@ lessons: [
     duration: "60 min",
     type: "project",
     videoUrl: "https://www.youtube.com/embed/7eh4d6sabA0"
+  }
+]
   },
-
+  {
+    title: "Full-Stack JavaScript",
+    slug: "full-stack-javascript",
+    description: "Ship production-ready applications with React, Node.js, APIs, and modern databases.",
+    category: "Development",
+    level: "Intermediate",
+    duration: "10 weeks",
+    instructor: "Jordan Lee",
+    color: "#f08c46",
+    icon: "code",
+    rating: 4.9,
+    studentCount: 3650,
+    skills: ["React", "Node.js", "MongoDB"],
  lessons: [
   {
     title: "Modern React architecture",
@@ -83,7 +126,20 @@ lessons: [
   }
 ]
   },
- lessons: [
+  {
+    title: "Data Storytelling",
+    slug: "data-storytelling",
+    description: "Turn complex analysis into clear, persuasive narratives that move decisions forward.",
+    category: "Data",
+    level: "Beginner",
+    duration: "5 weeks",
+    instructor: "Priya Shah",
+    color: "#e65d7b",
+    icon: "chart",
+    rating: 4.7,
+    studentCount: 1920,
+    skills: ["Visualization", "Narrative", "Analytics"],
+  lessons: [
   {
     title: "Find the story in data",
     duration: "20 min",
@@ -101,6 +157,8 @@ lessons: [
     duration: "18 min",
     type: "video",
     videoUrl: "https://www.youtube.com/embed/Unzc731iCUY"
+  }
+]
   }
 ];
 
@@ -142,4 +200,4 @@ async function seed() {
 seed().catch((error) => {
   console.error(error);
   process.exit(1);
-});
+});         isme kha pr video url lgaayeee
