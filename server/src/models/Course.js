@@ -4,7 +4,8 @@ const lessonSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
     duration: { type: String, default: "12 min" },
-    type: { type: String, enum: ["video", "article", "quiz", "project"], default: "video" }
+    type: { type: String, enum: ["video", "article", "quiz", "project"], default: "video" },
+    videoUrl: { type: String, default: "" }
   },
   { _id: false }
 );
