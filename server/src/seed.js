@@ -4,27 +4,32 @@ import User from "./models/User.js";
 import Course from "./models/Course.js";
 
 const courses = [
+lessons: [
   {
-    title: "AI Product Design",
-    slug: "ai-product-design",
-    description: "Design intelligent, human-centered products from first principles to polished prototypes.",
-    category: "Design",
-    level: "Intermediate",
-    duration: "6 weeks",
-    instructor: "Maya Chen",
-    color: "#7c5cff",
-    icon: "wand",
-    rating: 4.9,
-    studentCount: 2840,
-    featured: true,
-    skills: ["AI UX", "Prototyping", "Research"],
-    lessons: [
-      { title: "Designing with intelligence", duration: "18 min" },
-      { title: "AI interaction patterns", duration: "24 min" },
-      { title: "Prototype your copilot", duration: "45 min", type: "project" },
-      { title: "Trust and explainability", duration: "16 min" }
-    ]
+    title: "Designing with intelligence",
+    duration: "18 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/3qHkcs3kG44"
   },
+  {
+    title: "AI interaction patterns",
+    duration: "24 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/Oa9LTDR9ugU"
+  },
+  {
+    title: "Prototype your copilot",
+    duration: "45 min",
+    type: "project",
+    videoUrl: "https://www.youtube.com/embed/6mBO2vqLv38"
+  },
+  {
+    title: "Trust and explainability",
+    duration: "16 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/ad79nYk2keg"
+  },
+
  
   {
     title: "How generative AI works",
@@ -51,44 +56,51 @@ const courses = [
     videoUrl: "https://www.youtube.com/embed/7eh4d6sabA0"
   },
 
+ lessons: [
   {
-    title: "Full-Stack JavaScript",
-    slug: "full-stack-javascript",
-    description: "Ship production-ready applications with React, Node.js, APIs, and modern databases.",
-    category: "Development",
-    level: "Intermediate",
-    duration: "10 weeks",
-    instructor: "Jordan Lee",
-    color: "#f08c46",
-    icon: "code",
-    rating: 4.9,
-    studentCount: 3650,
-    skills: ["React", "Node.js", "MongoDB"],
-    lessons: [
-      { title: "Modern React architecture", duration: "36 min" },
-      { title: "Express API design", duration: "30 min" },
-      { title: "Modeling with MongoDB", duration: "34 min" },
-      { title: "Production deployment", duration: "25 min" }
-    ]
+    title: "Modern React architecture",
+    duration: "36 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/bMknfKXIFA8"
   },
   {
-    title: "Data Storytelling",
-    slug: "data-storytelling",
-    description: "Turn complex analysis into clear, persuasive narratives that move decisions forward.",
-    category: "Data",
-    level: "Beginner",
-    duration: "5 weeks",
-    instructor: "Priya Shah",
-    color: "#e65d7b",
-    icon: "chart",
-    rating: 4.7,
-    studentCount: 1920,
-    skills: ["Visualization", "Narrative", "Analytics"],
-    lessons: [
-      { title: "Find the story in data", duration: "20 min" },
-      { title: "Visual hierarchy", duration: "25 min" },
-      { title: "Present with confidence", duration: "18 min" }
-    ]
+    title: "Express API design",
+    duration: "30 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/SccSCuHhOw0"
+  },
+  {
+    title: "Modeling with MongoDB",
+    duration: "34 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/ofme2o29ngU"
+  },
+  {
+    title: "Production deployment",
+    duration: "25 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/l134cBAJCuc"
+  }
+]
+  },
+ lessons: [
+  {
+    title: "Find the story in data",
+    duration: "20 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/hVimVzgtD6w"
+  },
+  {
+    title: "Visual hierarchy",
+    duration: "25 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/TP2yID7Ubr4"
+  },
+  {
+    title: "Present with confidence",
+    duration: "18 min",
+    type: "video",
+    videoUrl: "https://www.youtube.com/embed/Unzc731iCUY"
   }
 ];
 
