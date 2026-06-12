@@ -1,9 +1,3 @@
-console.log(
-  courses[1].lessons.map(l => ({
-    title: l.title,
-    videoUrl: l.videoUrl
-  }))
-);
 import "dotenv/config";
 import mongoose from "mongoose";
 import User from "./models/User.js";
